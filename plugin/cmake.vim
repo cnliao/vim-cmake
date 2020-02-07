@@ -105,7 +105,7 @@ function! s:cmake_configure()
 
   let l:argumentstr = join(l:argument, " ")
   let l:escaped_build_dir=s:fnameescape(b:build_dir)
-  let l:home_dir = "-H".l:escaped_build_dir."/.."
+  let l:home_dir = "-S".l:escaped_build_dir."/.."
   let l:build_dir_path = "-B".l:escaped_build_dir
   let s:cmd = 'cmake '.l:home_dir.' '.l:build_dir_path.' '.l:argumentstr . " " . join(a:000)
 
